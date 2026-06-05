@@ -1,17 +1,1 @@
-# 1-M-1 Pickup and Delivery Problemj
-<!-- ee git sync 18064298583 -->
-<!-- e2e git ync 1780643048753 -->
-<!-- e2e git syn 1780643326175 -->
-<!-- e2e git sync 1780643435915 -->
-<!-- e2e git syc1786430511 ->
-<!-- 2e git sync 178064389683 -->
-<!-- e2e git sync 1780643956135 -->
-<!-- e2e git sync 17804413764 -->
-<!-- e2e git sync 1780644209545 -->
-<!-- e2e git sync 1780644368293 -->
-<!-- e2e git sync 178064578497 -->
-<!-- e2e git sync 1780644797232 -->
-<!-- e2e git sync 178064490166-->
-<!-- e2e git sync 178064593723 -->
-<!-- e2e git sync 178065306 -->
-<!-- e2e git ync 1780645454841 -->
+>
