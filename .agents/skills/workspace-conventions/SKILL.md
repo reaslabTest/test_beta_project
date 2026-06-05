@@ -8,7 +8,7 @@ description: Conventions for tools, skills, and project state in ReasLab workspa
 Standard shell tools are available in PATH. Use them directly.
 
 - Build Lean projects: `lake build`, `lake build Mathlib.Order.Basic`
-- Compile LaTeX: `latexmk`. Always use with `-interaction=nonstopmode`, `-file-line-error`, and `-synctex=1`. Choose compiler flag (`-pdf`, `-xelatex`, or `-lualatex`) based on the document. `-halt-on-error` is recommended; omit only when full log output is needed to systematically diagnose errors. If no user-specified or project-level latexmkrc is present, use `-r .reaslab_meta/tex/latexmkrc`.
+- Compile LaTeX: `latexmk`. Always use with `-interaction=nonstopmode`, `-file-line-error`, `-synctex=1`, and `-outdir=.latexmk_outdir` (the platform reads the PDF from there; passing it explicitly keeps output in the right place even when no latexmkrc is found). Choose compiler flag (`-pdf`, `-xelatex`, or `-lualatex`) based on the document. `-halt-on-error` is recommended; omit only when full log output is needed to systematically diagnose errors. If no user-specified or project-level latexmkrc is present, use `-r .reaslab_meta/tex/latexmkrc`.
 - Run Python: use `python-execute` (in PATH; run `python-execute --help` for all options), not `python3`/`uv`/`pip`
 - Search code: `rg`, `fd`, `jq`, `grep`, `find`
 - Open a file in the web UI: `open main.pdf`
