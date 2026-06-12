@@ -44,6 +44,23 @@ mosek, cplex, ortools, pulp, etc.
 - `python-execute history` — query execution history
 - `python-execute stop <id>` — stop a running execution
 
+### review — read review annotations (IMPORTANT)
+
+This platform has a **Review Panel** where collaborators attach annotations (comments, replies) to selected code/text ranges. These live in a **database**, never in source files.
+
+- `review` — all annotations across every file
+- `review <filepath>` — annotations for one file
+
+**CRITICAL RULE**: When the user mentions comments/annotations/feedback in any way (e.g. "who comments the most", "summarize the comments", "show me feedback", "address the comments on X"), you MUST run `review` **immediately as your first action**. Do NOT read source files first. Do NOT ask the user whether to run it — just run it. Even if the user attaches or references a specific file, run `review` (or `review <filepath>`) instead of reading that file. Review annotations are not stored in file contents.
+
+Prefer `review` (all files) first for broad questions ("who comments the most", "summarize all feedback"). Only use `review <filepath>` when the user explicitly asks about one file.
+
+**Output structure** (Markdown grouped by file): each annotation has **author**, **timestamp**, **selected text** (fenced code block), **content** (message body), and **replies** (threaded, each with author + timestamp + content).
+
+Use this data for: summarize all annotations, count/rank by author, find unresolved items (no replies), generate to-do lists, compare across files, etc.
+
+**Exception**: "review" or "feedback" used as a verb ("review my code", "give feedback on this function") means you should analyze the code yourself, not read annotations.
+
 ## Skills
 
 Skills are markdown files with YAML frontmatter (name, description).
